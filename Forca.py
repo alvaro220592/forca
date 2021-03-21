@@ -108,3 +108,22 @@ p1.digitando()
 #     aleatoria = random.choice(leitura)
 #     p = aleatoria.strip()
 #     print(p)
+
+
+"""
+Mostrar apenas a letra certa na palavra secreta:
+
+palavra = 'alvaro'
+letra = 'w'
+
+j = 0
+for i in palavra:
+    if letra == palavra[j]:
+        print (letra)
+    else:
+        print('_')
+    j += 1
+
+
+
+"""
