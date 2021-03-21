@@ -116,14 +116,10 @@ Mostrar apenas a letra certa na palavra secreta:
 palavra = 'alvaro'
 letra = 'w'
 
-j = 0
 for i in palavra:
-    if letra == palavra[j]:
+    if letra == i:
         print (letra)
     else:
         print('_')
-    j += 1
-
-
 
 """
