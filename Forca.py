@@ -122,4 +122,14 @@ for i in palavra:
     else:
         print('_')
 
+Mostrar as letras corretas já jogadas:
+
+letras = ['a', 'r', 'l', 'x', 'z']
+
+for p in palavra:
+    if p in letras:
+        print(p, end = ' ')
+    else:
+        print('_', end = ' ')
+
 """
