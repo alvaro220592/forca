@@ -73,7 +73,7 @@ class Palavra():
         with open('palavras.txt', 'r') as f:
             leitura = f.readlines() # O 'readlines' lê as linhas do arquivo 'f'
             aleatoria = random.choice(leitura) # A função 'choice' do módulo random escolhe aleatoriamente uma palavra e a atribui à variável 'aleatoria'
-            p = aleatoria.strip() # O 'strip' garante o retorno da palavra sem espaços no início e no fim. Isso foi atribuído à variável 'p'
+            p = aleatoria.strip().upper() # O 'strip' garante o retorno da palavra sem espaços no início e no fim. Isso foi atribuído à variável 'p'
             return p
 
     def digitando(self):
@@ -104,11 +104,15 @@ class Palavra():
                     print('\n============')
                     print('Você perdeu!')
                     print('============')
+                    print(f'A palavra é: {word}')
                     exit()
             else:
                 print(board[corpo]) # Senão, o board atual é mostrado
-            digitadas.append(entrada) # A letra digitada é agregada à lista de letras digitadas
+            
+            digitadas.append(entrada.upper()) # A letra digitada é agregada à lista de letras digitadas
+            
             print(f'\nLetras digitadas:')
+            
             for d in digitadas: # Para cada item na lista de letras digitadas, aparecerão os itens, ou seja, as letras
                 print(d, end = ' ') # O "end = ' '" evita a quebra de linhas a cada item mostrado, pois sem isso, o python entenderia como '\n'
 
@@ -141,7 +145,9 @@ p1.digitando()
 
 
 
-
+# ### PENDÊNCIAS: ###
+# Não aceitar letras que já foram jogadas
+# Construir o método main() para que a partir dele, os outros sejam chamados(boa prática)
 
 # ### RASCUNHOS ####
 # with open('palavras.txt', 'r') as arquivo:
